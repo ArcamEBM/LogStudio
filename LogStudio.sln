@@ -1,0 +1,97 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.352
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogStudio", "LogStudio\LogStudio.csproj", "{E5DCB71A-67B7-419C-B3A7-D6FEB1054E1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogStudio.Graph", "LogStudio.Graph\LogStudio.Graph.csproj", "{94B1AA51-849D-45AF-A1C5-8F1A4EF7BD9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogStudio.Reader", "LogStudio.Reader\LogStudio.Reader.csproj", "{A1973727-05EA-43B1-9DC3-A779C616B4F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogStudio.Data", "LogStudio.Data\LogStudio.Data.csproj", "{44A8B9DA-34C1-47C7-95E0-17A8B4B27E25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogStudio.DataTest", "LogStudio.DataTest\LogStudio.DataTest.csproj", "{164FB955-A028-48C5-A385-AD7E78EEF49B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogStudio.Framework", "LogStudio.Framework\LogStudio.Framework.csproj", "{536A9723-9E17-4876-B907-EE7B33DAB464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogStudio.Reader.Test", "LogStudio.Reader.Test\LogStudio.Reader.Test.csproj", "{1FC5E1FE-B757-4995-935F-16B8EDCF9B41}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "LogStudio.Setup", "LogStudio.Setup\LogStudio.Setup.wixproj", "{091F88CD-53EE-44FE-9FB1-5B8A1039C92C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DDBADA30-D197-4E00-8EB0-7C3C29C71BB1}"
+	ProjectSection(SolutionItems) = preProject
+		SharedSolutionAssemblyInfo.cs = SharedSolutionAssemblyInfo.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{2A048410-7F67-4F05-8087-277B04F0AAAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogFileGenerator", "Tools\LogFileGenerator\LogFileGenerator.csproj", "{048184DD-7ACF-4C15-9EAF-13D93500AD9A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogStudio.LogFileRepair", "Tools\LogStudio.LogFileRepair\LogStudio.LogFileRepair.csproj", "{DC55B744-3742-4E29-9AA4-B175C2D1D201}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogStudio.Test", "LogStudio.Test\LogStudio.Test.csproj", "{184C06EF-332F-4128-91E0-D33D461E8E52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5DCB71A-67B7-419C-B3A7-D6FEB1054E1D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5DCB71A-67B7-419C-B3A7-D6FEB1054E1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5DCB71A-67B7-419C-B3A7-D6FEB1054E1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5DCB71A-67B7-419C-B3A7-D6FEB1054E1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94B1AA51-849D-45AF-A1C5-8F1A4EF7BD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B1AA51-849D-45AF-A1C5-8F1A4EF7BD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B1AA51-849D-45AF-A1C5-8F1A4EF7BD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B1AA51-849D-45AF-A1C5-8F1A4EF7BD9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1973727-05EA-43B1-9DC3-A779C616B4F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1973727-05EA-43B1-9DC3-A779C616B4F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1973727-05EA-43B1-9DC3-A779C616B4F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1973727-05EA-43B1-9DC3-A779C616B4F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44A8B9DA-34C1-47C7-95E0-17A8B4B27E25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A8B9DA-34C1-47C7-95E0-17A8B4B27E25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A8B9DA-34C1-47C7-95E0-17A8B4B27E25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A8B9DA-34C1-47C7-95E0-17A8B4B27E25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164FB955-A028-48C5-A385-AD7E78EEF49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164FB955-A028-48C5-A385-AD7E78EEF49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164FB955-A028-48C5-A385-AD7E78EEF49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164FB955-A028-48C5-A385-AD7E78EEF49B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{536A9723-9E17-4876-B907-EE7B33DAB464}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{536A9723-9E17-4876-B907-EE7B33DAB464}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{536A9723-9E17-4876-B907-EE7B33DAB464}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{536A9723-9E17-4876-B907-EE7B33DAB464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FC5E1FE-B757-4995-935F-16B8EDCF9B41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FC5E1FE-B757-4995-935F-16B8EDCF9B41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FC5E1FE-B757-4995-935F-16B8EDCF9B41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FC5E1FE-B757-4995-935F-16B8EDCF9B41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{091F88CD-53EE-44FE-9FB1-5B8A1039C92C}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{091F88CD-53EE-44FE-9FB1-5B8A1039C92C}.Release|Any CPU.ActiveCfg = Release|x86
+		{091F88CD-53EE-44FE-9FB1-5B8A1039C92C}.Release|Any CPU.Build.0 = Release|x86
+		{048184DD-7ACF-4C15-9EAF-13D93500AD9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{048184DD-7ACF-4C15-9EAF-13D93500AD9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{048184DD-7ACF-4C15-9EAF-13D93500AD9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{048184DD-7ACF-4C15-9EAF-13D93500AD9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC55B744-3742-4E29-9AA4-B175C2D1D201}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC55B744-3742-4E29-9AA4-B175C2D1D201}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC55B744-3742-4E29-9AA4-B175C2D1D201}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC55B744-3742-4E29-9AA4-B175C2D1D201}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184C06EF-332F-4128-91E0-D33D461E8E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184C06EF-332F-4128-91E0-D33D461E8E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184C06EF-332F-4128-91E0-D33D461E8E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184C06EF-332F-4128-91E0-D33D461E8E52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{048184DD-7ACF-4C15-9EAF-13D93500AD9A} = {2A048410-7F67-4F05-8087-277B04F0AAAA}
+		{DC55B744-3742-4E29-9AA4-B175C2D1D201} = {2A048410-7F67-4F05-8087-277B04F0AAAA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		CodeStyleEnforcer_Active = -1
+		CodeStyleEnforcer_RulesLocation = 0
+		SolutionGuid = {AA056958-5857-4C29-BE9C-8BA749733400}
+	EndGlobalSection
+EndGlobal
