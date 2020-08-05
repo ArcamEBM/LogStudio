@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+  <?define OutputPath="..\Output\"?>
+  <?define ProductVersion=!(bind.fileVersion.LogStudio.exe)?>
+  <?define ProductName=$(var.LogStudio.TargetName)?>
+  <?define ProductManufacturer=$(var.LogStudio.TargetName)?>
+  <?define ProductUpgradeCode="19007365-15c8-421f-bbbd-d01666a82d19"?>
+  <Product Id="*"
+           Name="$(var.ProductName) $(var.ProductVersion)"
+           Language="1033"
+           Version="$(var.ProductVersion)"
+           Manufacturer="$(var.ProductManufacturer)"
+           UpgradeCode="$(var.ProductUpgradeCode)">
+    <Package InstallerVersion="200"
+             Compressed="yes"
+             InstallScope="perMachine"
+             InstallPrivileges="elevated"
+             Languages="1033"
+             Manufacturer="$(var.ProductManufacturer)"
+             Keywords="$(var.ProductName)"
+             Comments="$(var.ProductName) $(var.ProductVersion) Installer."
+             Description="$(var.ProductName) $(var.ProductVersion) Installer." />
+    <!-- install conditions -->
+    <PropertyRef Id="WIX_IS_NETFRAMEWORK_461_OR_LATER_INSTALLED" />
+    <Condition Message="$(var.ProductName) $(var.ProductVersion) requires .NET Framework 4.6.1 or higher.">
+      <![CDATA[Installed OR WIX_IS_NETFRAMEWORK_461_OR_LATER_INSTALLED]]>
+    </Condition>
+    <Condition Message="$(var.ProductName) $(var.ProductVersion) requires at least Windows XP Service Pack 3 or higher.">
+      <![CDATA[Installed OR ((VersionNT > 501) OR (VersionNT = 501 AND ServicePackLevel = 3))]]>
+    </Condition>
+    <Condition Message="$(var.ProductName) $(var.ProductVersion) requires at least Windows Vista Service Pack 1 or higher.">
+      <![CDATA[Installed OR ((VersionNT > 600) OR (VersionNT = 600 AND ServicePackLevel = 1))]]>
+    </Condition>
+    <Condition Message="$(var.ProductName) $(var.ProductVersion) requires at least Windows 7 Service Pack 1 or higher.">
+      <![CDATA[Installed OR ((VersionNT > 601) OR (VersionNT = 601 AND ServicePackLevel = 1))]]>
+    </Condition>
+    <!-- product settings -->
+    <MajorUpgrade DowngradeErrorMessage="A newer version of $(var.ProductName) $(var.ProductVersion) is already installed." />
+    <MediaTemplate EmbedCab="yes" />
+    <!-- ui settings -->
+    <WixVariable Id="WixUILicenseRtf" Value="License.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="Banner.jpg" />
+    <WixVariable Id="WixUIDialogBmp" Value="Dialog.jpg" />
+    <Icon Id="Icon.ico" SourceFile="Icon.ico" />
+    <Property Id="ARPPRODUCTICON" Value="Icon.ico" />
+    <UIRef Id="WixUI_Custom" />
+    <!-- features tree -->
+    <Feature Id="ProductFeature"
+             Title="$(var.ProductName)"
+             Description="Main Application"
+             Absent="disallow"
+             AllowAdvertise="no"
+             InstallDefault="local"
+             Display="expand"
+             Level="1">
+      <ComponentGroupRef Id="RootFolderFiles" />
+      <ComponentRef Id="ApplicationRegistryEntries"/>
+      <Feature Id="StartMenuShortcutFeature"
+               Title="StartMenu Shortcut"
+               Description="Add application shortcut to StartMenu"
+               Absent="allow"
+               AllowAdvertise="no"
+               InstallDefault="followParent"
+               Level="1">
+        <ComponentRef Id="ApplicationShortcutStartMenu" />
+      </Feature>
+      <Feature Id="DesktopShortcutFeature"
+               Title="Desktop Shortcut"
+               Description="Add application shortcut to Desktop"
+               Absent="allow"
+               AllowAdvertise="no"
+               InstallDefault="followParent"
+               Level="1">
+        <ComponentRef Id="ApplicationShortcutDesktop" />
+      </Feature>
+    </Feature>
+  </Product>
+  <!-- application folders and shortcuts -->
+  <Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="APPLICATIONFOLDER" Name="$(var.ProductName) $(var.ProductVersion)">
+          <Directory Id="RulesFolder" Name="Rules" />
+        </Directory>
+      </Directory>
+      <!-- start menu folder and shortcuts -->
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ApplicationProgramsFolder" Name="$(var.ProductName) $(var.ProductVersion)">
+          <Component Id="ApplicationShortcutStartMenu" Guid="1cca14d8-11b7-4f42-9fd8-aa1d3a29f696">
+            <Shortcut Id="ApplicationStartMenuShortcut"
+                      Name="$(var.ProductName) $(var.ProductVersion)"
+                      Description="$(var.ProductName) Description"
+                      Target="[APPLICATIONFOLDER]LogStudio.exe"
+                      WorkingDirectory="APPLICATIONFOLDER" />
+            <RemoveFolder Id="RemoveApplicationProgramsFolder" Directory="ApplicationProgramsFolder" On="uninstall" />
+            <RegistryValue Root="HKCU"
+                           Key="Software\$(var.ProductManufacturer)\$(var.ProductName) $(var.ProductVersion)"
+                           Name="StartMenuShortcutInstalled"
+                           Type="integer"
+                           Value="1"
+                           KeyPath="yes" />
+          </Component>
+        </Directory>
+      </Directory>
+      <!-- desktop shortcuts -->
+      <Directory Id="DesktopFolder" Name="Desktop">
+        <Component Id="ApplicationShortcutDesktop" Guid="c503ae5a-f1b1-4d0b-8441-1b8d30714be2">
+          <Shortcut Id="ApplicationDesktopShortcut"
+                    Name="$(var.ProductName) $(var.ProductVersion)"
+                    Description="$(var.ProductName) Description"
+                    Target="[APPLICATIONFOLDER]LogStudio.exe"
+                    WorkingDirectory="APPLICATIONFOLDER" />
+          <RegistryValue Root="HKCU"
+                         Key="Software\$(var.ProductManufacturer)\$(var.ProductName) $(var.ProductVersion)"
+                         Name="DesktopShortcutInstalled"
+                         Type="integer"
+                         Value="1"
+                         KeyPath="yes" />
+        </Component>
+      </Directory>
+    </Directory>
+  </Fragment>
+  <!-- application registry entries -->
+  <Fragment>
+    <Component Id="ApplicationRegistryEntries" Directory="APPLICATIONFOLDER" Guid="7f5691f5-b2e8-4af7-8a83-cd1a9a6a7529">
+      <RegistryKey Root="HKLM"
+                   Key="Software\$(var.ProductManufacturer)\$(var.ProductName) $(var.ProductVersion)"
+                   ForceCreateOnInstall="yes"
+                   ForceDeleteOnUninstall="yes">
+        <RegistryValue Type="string" Name="Path" Value="[APPLICATIONFOLDER]" KeyPath="yes" />
+        <RegistryValue Type="string" Name="Version" Value="$(var.ProductVersion)" />
+      </RegistryKey>
+    </Component>
+  </Fragment>
+  <!-- custom ui -->
+  <Fragment>
+    <UI Id="WixUI_Custom">
+      <TextStyle Id="WixUI_Font_Normal" FaceName="Tahoma" Size="8" />
+      <TextStyle Id="WixUI_Font_Bigger" FaceName="Tahoma" Size="12" Bold="yes" />
+      <TextStyle Id="WixUI_Font_Title" FaceName="Tahoma" Size="9" Bold="yes" />
+      <TextStyle Id="WixUI_Font_Emphasized" FaceName="Tahoma" Size="8" Bold="yes" />
+      <Property Id="DefaultUIFont" Value="WixUI_Font_Normal" />
+      <Property Id="WIXUI_INSTALLDIR" Value="APPLICATIONFOLDER" />
+      <DialogRef Id="ErrorDlg" />
+      <DialogRef Id="FatalError" />
+      <DialogRef Id="FilesInUse" />
+      <DialogRef Id="UserExit" />
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="LicenseAgreementDlg">NOT Installed</Publish>
+      <Publish Dialog="WelcomeDlg" Control="Next" Event="NewDialog" Value="VerifyReadyDlg">Installed AND PATCH</Publish>
+      <Publish Dialog="LicenseAgreementDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg">1</Publish>
+      <Publish Dialog="LicenseAgreementDlg" Control="Next" Event="NewDialog" Value="InstallDirDlg">LicenseAccepted = "1"</Publish>
+      <Publish Dialog="InstallDirDlg" Control="Back" Event="NewDialog" Value="LicenseAgreementDlg">1</Publish>
+      <Publish Dialog="InstallDirDlg" Control="Next" Event="SetTargetPath" Value="[WIXUI_INSTALLDIR]" Order="1">1</Publish>
+      <Publish Dialog="InstallDirDlg" Control="Next" Event="DoAction" Value="WixUIValidatePath" Order="2">NOT WIXUI_DONTVALIDATEPATH</Publish>
+      <Publish Dialog="InstallDirDlg" Control="Next" Event="SpawnDialog" Value="InvalidDirDlg" Order="3"><![CDATA[NOT WIXUI_DONTVALIDATEPATH AND WIXUI_INSTALLDIR_VALID<>"1"]]></Publish>
+      <Publish Dialog="InstallDirDlg" Control="Next" Event="NewDialog" Value="FeaturesDlg" Order="4">WIXUI_DONTVALIDATEPATH OR WIXUI_INSTALLDIR_VALID="1"</Publish>
+      <Publish Dialog="InstallDirDlg" Control="ChangeFolder" Property="_BrowseProperty" Value="[WIXUI_INSTALLDIR]" Order="1">1</Publish>
+      <Publish Dialog="InstallDirDlg" Control="ChangeFolder" Event="SpawnDialog" Value="BrowseDlg" Order="2">1</Publish>
+      <Publish Dialog="BrowseDlg" Control="OK" Event="DoAction" Value="WixUIValidatePath" Order="1">1</Publish>
+      <Publish Dialog="BrowseDlg" Control="OK" Event="SpawnDialog" Value="InvalidDirDlg" Order="2"><![CDATA[WIXUI_INSTALLDIR_VALID<>"1"]]></Publish>
+      <Publish Dialog="FeaturesDlg" Control="Back" Event="NewDialog" Value="InstallDirDlg">NOT Installed</Publish>
+      <Publish Dialog="FeaturesDlg" Control="Back" Event="NewDialog" Value="MaintenanceTypeDlg">Installed</Publish>
+      <Publish Dialog="MaintenanceWelcomeDlg" Control="Next" Event="NewDialog" Value="MaintenanceTypeDlg">1</Publish>
+      <Publish Dialog="MaintenanceTypeDlg" Control="ChangeButton" Event="NewDialog" Value="FeaturesDlg">1</Publish>
+      <Publish Dialog="MaintenanceTypeDlg" Control="RepairButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+      <Publish Dialog="MaintenanceTypeDlg" Control="RemoveButton" Event="NewDialog" Value="VerifyReadyDlg">1</Publish>
+      <Publish Dialog="MaintenanceTypeDlg" Control="Back" Event="NewDialog" Value="MaintenanceWelcomeDlg">1</Publish>
+      <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="MaintenanceTypeDlg" Order="2">Installed AND NOT PATCH</Publish>
+      <Publish Dialog="VerifyReadyDlg" Control="Back" Event="NewDialog" Value="WelcomeDlg" Order="3">Installed AND PATCH</Publish>
+      <Publish Dialog="ExitDialog" Control="Finish" Event="EndDialog" Value="Return" Order="999">1</Publish>
+    </UI>
+    <UIRef Id="WixUI_Common" />
+  </Fragment>
+  <!-- application files -->
+  <Fragment>
+    <ComponentGroup Id="RootFolderFiles" Directory="APPLICATIONFOLDER">
+      <Component Id="LogStudio.exe" Guid="f64c8f67-489d-4474-aa19-4caab598102d">
+        <File Id="LogStudio.exe" Name="LogStudio.exe" Source="$(var.OutputPath)LogStudio.exe" />
+      </Component>
+      <Component Id="LogStudio.exe.config" Guid="100a6161-2dc6-43af-b51b-2a913129547f">
+        <File Id="LogStudio.exe.config" Name="LogStudio.exe.config" Source="$(var.OutputPath)LogStudio.exe.config" />
+      </Component>
+      <Component Id="ItemReplacements.data" Guid="30c16f7a-0cc8-4f15-b298-ee652d4e66e3">
+        <File Id="ItemReplacements.data" Name="ItemReplacements.data" Source="$(var.OutputPath)ItemReplacements.data" />
+      </Component>
+      <Component Id="log4net.dll" Guid="0088b9c9-4574-4a2b-a658-b81a3ba60396">
+        <File Id="log4net.dll" Name="log4net.dll" Source="$(var.OutputPath)log4net.dll" />
+      </Component>
+      <Component Id="LogStudio.data" Guid="6f20074d-ee0f-4be4-9b5b-e0f71747134d">
+        <File Id="LogStudio.data" Name="LogStudio.data" Source="$(var.OutputPath)LogStudio.data" />
+      </Component>
+      <Component Id="LogStudio.Data.dll" Guid="a17576d7-48c4-4dcb-94dc-3e497a52a55c">
+        <File Id="LogStudio.Data.dll" Name="LogStudio.Data.dll" Source="$(var.OutputPath)LogStudio.Data.dll" />
+      </Component>
+      <Component Id="LogStudio.Framework.dll" Guid="51d00cee-0f21-4dad-8e8a-4fa9cf5044cb">
+        <File Id="LogStudio.Framework.dll" Name="LogStudio.Framework.dll" Source="$(var.OutputPath)LogStudio.Framework.dll" />
+      </Component>
+      <Component Id="LogStudio.Module.Graph.dll" Guid="59bbdee7-40b0-41ae-8f7c-4d336f88cc5a">
+        <File Id="LogStudio.Module.Graph.dll" Name="LogStudio.Module.Graph.dll" Source="$(var.OutputPath)LogStudio.Module.Graph.dll" />
+      </Component>
+      <Component Id="LogStudio.Module.Reader.dll" Guid="9f08f481-e222-4f08-98e8-feefe84576ec">
+        <File Id="LogStudio.Module.Reader.dll" Name="LogStudio.Module.Reader.dll" Source="$(var.OutputPath)LogStudio.Module.Reader.dll" />
+      </Component>
+      <Component Id="Microsoft.Msagl.dll" Guid="e79aff82-d12e-4a20-ae8b-cbcc9b3f29e7">
+        <File Id="Microsoft.Msagl.dll" Name="Microsoft.Msagl.dll" Source="$(var.OutputPath)Microsoft.Msagl.dll" />
+      </Component>
+      <Component Id="Microsoft.Msagl.Drawing.dll" Guid="e757b75c-a160-4880-9ce2-b1d96f948492">
+        <File Id="Microsoft.Msagl.Drawing.dll" Name="Microsoft.Msagl.Drawing.dll" Source="$(var.OutputPath)Microsoft.Msagl.Drawing.dll" />
+      </Component>
+      <Component Id="Microsoft.Msagl.GraphViewerGdi.dll" Guid="fd6b8181-b75f-4142-9671-f7aa2ffbc80b">
+        <File Id="Microsoft.Msagl.GraphViewerGdi.dll" Name="Microsoft.Msagl.GraphViewerGdi.dll" Source="$(var.OutputPath)Microsoft.Msagl.GraphViewerGdi.dll" />
+      </Component>
+      <Component Id="System.ValueTuple.dll" Guid="7962ec89-35de-4fed-9624-209c5de1eb12">
+        <File Id="System.ValueTuple.dll" Name="System.ValueTuple.dll" Source="$(var.OutputPath)System.ValueTuple.dll" />
+      </Component>
+      <Component Id="ZedGraph.dll" Guid="e67ccbd3-785d-4a79-a0bb-754980cb8293">
+        <File Id="ZedGraph.dll" Name="ZedGraph.dll" Source="$(var.OutputPath)ZedGraph.dll" />
+      </Component>
+      <Component Id="License.rtf" Guid="9d5ed7f7-455b-4916-8578-c49686b9f965">
+        <File Id="License.rtf" Name="License.rtf" Source="License.rtf" />
+      </Component>
+    </ComponentGroup>
+  </Fragment>
+</Wix>
