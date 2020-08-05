@@ -1,0 +1,8 @@
+#-IOItem: Name=Alpha|DName=Alphan|Type=Boolean|Unit=|Format=|Axis=Linear|HiHi=0|Hi=0|Lo=0|LoLo=0
+#-IOItem: Name=Beta|DName=Betan|Type=Single|Unit=|Format=|Axis=Linear|HiHi=0|Hi=0|Lo=0|LoLo=0
+#-IOItem: Name=Delta|DName=Deltan|Type=Single|Unit=ms|Format=N0|Axis=Linear|HiHi=0|Hi=0|Lo=0|LoLo=0
+2010-04-06 16:33:42.081|Alpha|Core|1669|False
+2010-04-06 16:33:42.081|Beta|Core|1669|20
+2010-04-06 16:33:42.081|Delta|Core|1669|0.7
+2010-04-06 16:33:43.081|Beta|Core|1800|22
+2010-04-06 16:33:44.081|Alpha|Core|2000|True
