@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<SettingsGraph xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Pages>
+    <PageSettings Name="Rake" IsSynchronizeXAxes="false" IsSynchronizeYAxes="false">
+      <Panes>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Process.LeftRegulator.PulseLength" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16711681" />
+            <ItemSettings ID="Process.RightRegulator.PulseLength" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16181" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Process.RightRegulator.NextPosition" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Process.LeftRegulator.NextPosition" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Process.RightRegulator.ZeroPulseCounter" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+            <ItemSettings ID="Process.LeftRegulator.ZeroPulseCounter" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16744448" />
+          </Items>
+        </PaneSettings>
+      </Panes>
+    </PageSettings>
+    <PageSettings Name="Beam" IsSynchronizeXAxes="false" IsSynchronizeYAxes="false">
+      <Panes>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.PowerSupply.Beam.BeamCurrent" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.PowerSupply.HighVoltage.Grid" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="true" />
+          <Items>
+            <ItemSettings ID="Process.CathodeTuningControl.MeanCathodePower" AssignedToX2Axis="false" AssignedToY2Axis="true" ShowSymbol="false" Color="-8388480" />
+            <ItemSettings ID="OPC.PowerSupply.Filament.CurrentFB" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16711681" />
+            <ItemSettings ID="OPC.PowerSupply.Filament.VoltageFB" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16181" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.PowerSupply.SmokeDetector.Counts" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+            <ItemSettings ID="OPC.PowerSupply.SmokeDetector.SmokeDetected" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16744448" />
+          </Items>
+        </PaneSettings>
+      </Panes>
+    </PageSettings>
+    <PageSettings Name="Power supply" IsSynchronizeXAxes="false" IsSynchronizeYAxes="false">
+      <Panes>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.PowerSupply.HighVoltage.VoltageDmd" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16744448" />
+            <ItemSettings ID="OPC.PowerSupply.HighVoltage.VoltageFB" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-8388480" />
+            <ItemSettings ID="OPC.PowerSupply.HighVoltage.VoltageDmd" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+            <ItemSettings ID="OPC.PowerSupply.HighVoltage.VoltageFB" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16744448" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.PowerSupply.HighVoltage.ArcTrip" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+            <ItemSettings ID="OPC.PowerSupply.PSTrip" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16744448" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Beam.Statistics.BufferRemaining" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.PowerSupply.Focus.FocusFB" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+      </Panes>
+    </PageSettings>
+    <PageSettings Name="Vacuum" IsSynchronizeXAxes="false" IsSynchronizeYAxes="false">
+      <Panes>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Log" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.Vacuum.BackingVacuumGaugeFB" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Log" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.Vacuum.ChamberVacuumGaugeFB" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Log" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.Vacuum.ColumnVacuumGaugeFB" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-65536" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.Vacuum.TurboPump[0].Current" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-65536" />
+            <ItemSettings ID="OPC.Vacuum.TurboPump[1].Current" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16744448" />
+          </Items>
+        </PaneSettings>
+      </Panes>
+    </PageSettings>
+    <PageSettings Name="Temperature" IsSynchronizeXAxes="false" IsSynchronizeYAxes="false">
+      <Panes>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.Temperature.ColumnTemperature" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="" Format="Date" IsVisible="true" />
+          <YAxis Title="" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.Temperature.BottomTemperature" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+      </Panes>
+    </PageSettings>
+    <PageSettings Name="Table &amp; Rake Currents / Torques" IsSynchronizeXAxes="false" IsSynchronizeYAxes="false">
+      <Panes>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.Rake.CurrentFeedback" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+            <ItemSettings ID="OPC.Rake.RakeMotorTorqueUtilization" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-65536" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.Table.CurrentFeedback" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+            <ItemSettings ID="OPC.Table.TableMotorTorqueUtilization" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-65536" />
+          </Items>
+        </PaneSettings>
+      </Panes>
+    </PageSettings>
+    <PageSettings Name="Layer" IsSynchronizeXAxes="false" IsSynchronizeYAxes="false">
+      <Panes>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Builds.State.CurrentBuild.CurrentHeight" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="OPC.Table.CurrentPosition" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Builds.State.CurrentBuild.BuildTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+            <ItemSettings ID="Builds.State.CurrentBuild.LastLayerTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16744448" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Analyse.Calculations.ApproximatedTotalTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+      </Panes>
+    </PageSettings>
+    <PageSettings Name="Diagnostics" IsSynchronizeXAxes="false" IsSynchronizeYAxes="false">
+      <Panes>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Core.Cache.Performance.MaxCycleTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-5383962" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Core.Diagnostics.GCLoad" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+            <ItemSettings ID="Core.Diagnostics.CPU" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16711681" />
+          </Items>
+        </PaneSettings>
+      </Panes>
+    </PageSettings>
+    <PageSettings Name="RakeSensorDiag" IsSynchronizeXAxes="false" IsSynchronizeYAxes="false">
+      <Panes>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="true" />
+          <Items>
+            <ItemSettings ID="OPC.Rake.CurrentPosition" AssignedToX2Axis="false" AssignedToY2Axis="true" ShowSymbol="false" Color="-16181" />
+            <ItemSettings ID="OPC.RakeSensor.RakeLeftSensorPulse" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-5383962" />
+            <ItemSettings ID="OPC.RakeSensor.RakeLeftSensorPulse2" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-2396013" />
+          </Items>
+        </PaneSettings>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="true" />
+          <Items>
+            <ItemSettings ID="OPC.RakeSensor.RakeRightSensorPulse" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+            <ItemSettings ID="OPC.RakeSensor.RakeRightSensorPulse2" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16744448" />
+            <ItemSettings ID="OPC.Rake.CurrentPosition" AssignedToX2Axis="false" AssignedToY2Axis="true" ShowSymbol="false" Color="-8388480" />
+          </Items>
+        </PaneSettings>
+      </Panes>
+    </PageSettings>
+    <PageSettings Name="Analyse" IsSynchronizeXAxes="false" IsSynchronizeYAxes="false">
+      <Panes>
+        <PaneSettings Name="">
+          <XAxis Title="Time" Format="Date" IsVisible="true" />
+          <YAxis Title="Value" Format="Linear" IsVisible="true" />
+          <X2Axis Title="" Format="Linear" IsVisible="false" />
+          <Y2Axis Title="Value" Format="Linear" IsVisible="false" />
+          <Items>
+            <ItemSettings ID="Analyse.Calculations.Melt[1].ContourTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+            <ItemSettings ID="Analyse.Calculations.Heat.TotalCoolTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16744448" />
+            <ItemSettings ID="Analyse.Calculations.Heat.TotalHeatTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-8388480" />
+            <ItemSettings ID="Analyse.Calculations.Heat.MinHeatTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16711681" />
+            <ItemSettings ID="Analyse.Calculations.Melt[1].SquaresTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16181" />
+            <ItemSettings ID="Analyse.Calculations.Melt[2].ContourTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-5383962" />
+            <ItemSettings ID="Analyse.Calculations.Melt[2].SquaresTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-2396013" />
+            <ItemSettings ID="Analyse.Calculations.Melt[3].SquaresTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-13726889" />
+            <ItemSettings ID="Analyse.Calculations.Melt[3].ContourTime" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-256" />
+            <ItemSettings ID="Analyse.Calculations.Melt[1].PowerAnalyseCurrent" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-16776961" />
+          </Items>
+        </PaneSettings>
+      </Panes>
+    </PageSettings>
+  </Pages>
+  <TabReader>
+    <Tabs />
+  </TabReader>
+</SettingsGraph>
