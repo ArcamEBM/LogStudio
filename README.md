@@ -14,7 +14,7 @@ The software runs on Windows 7 and 10 operating system. Make sure that .NET Fram
 
 ### Installing the software
 
-Double-click the msi file located in the folder ? and follow the instructions in the installer wizard.
+Double-click the msi file located in the folder LogStudio.Setup\bin\Release and follow the instructions in the installer wizard.
 
 ### Usage
 
@@ -126,7 +126,7 @@ The unit tests in the project do not have full coverage. To run the tests in the
 You can create an installer by running the LogStudio.Setup project. It produces an .msi and a cabinet file for installation of the software.
 We refer to the [WiX Toolset documentation](https://wixtoolset.org/) on how to make changes in the Setup project.
 
-To facilitate changes in the setup project, you can install the Wix Toolset Visual Studio 2019 extension in Visual Studio.
+To facilitate changes in the setup project, you can install the Wix Toolset Visual Studio 2019 extension in Visual Studio and wix311.exe from [WiX Toolset downloads](https://wixtoolset.org/).
 
 We do not yet have support for automatic updates.
 
