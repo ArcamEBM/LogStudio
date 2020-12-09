@@ -146,7 +146,7 @@ Please read more in our [contributing guidelines](CONTRIBUTING.md).
 
 ## License
 
-This project is licensed under the LGPL 3 License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the LGPL 3 License - see the [License.md](License.md) file for details.
 
 ## Contact
 
