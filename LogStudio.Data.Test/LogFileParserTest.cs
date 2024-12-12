@@ -2,7 +2,7 @@
 using NUnit.Framework;
 using System.Collections.Generic;
 
-namespace LogStudio.DataTest
+namespace LogStudio.Data.Test
 {
     [TestFixture]
     public class LogFileParserTest

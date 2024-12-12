@@ -860,5 +860,25 @@ namespace LogStudio
         {
             CompareLogFile(sender, e);
         }
-    }
+
+		private void correlationToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+            if (m_Database == null)
+				return;
+            
+			string selected = m_ItemTree.Module.SelectedItem;
+			if (string.IsNullOrEmpty(selected))
+			{
+				MessageBox.Show("Select a parameter.", "No parameter selected", MessageBoxButtons.OK);
+				return;
+			}
+
+			using (var win = new Correlation())
+			{
+				win.Initialize(m_Database, selected);
+				win.ShowDialog();
+			}
+		}
+
+	}
 }

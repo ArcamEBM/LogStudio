@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace LogStudio.DataTest
+namespace LogStudio.Data.Test
 {
     [TestFixture]
     public class LogDatabaseTests

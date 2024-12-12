@@ -4,8 +4,8 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LogStudio.DataTest")]
-[assembly: AssemblyDescription("LogStudio.DataTest")]
+[assembly: AssemblyTitle("LogStudio.Data.Test")]
+[assembly: AssemblyDescription("LogStudio.Data.Test")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyProduct("Log Studio")]
 [assembly: AssemblyTrademark("")]

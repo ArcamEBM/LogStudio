@@ -156,7 +156,7 @@
           <X2Axis Title="" Format="Linear" IsVisible="false" />
           <Y2Axis Title="" Format="Linear" IsVisible="false" />
           <Items>
-            <ItemSettings ID="OPC.Vacuum.ColumnVacuumGaugeFB" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-65536" />
+            <ItemSettings ID="OPC.Vacuum.ColumnVaccumGaugeFB" AssignedToX2Axis="false" AssignedToY2Axis="false" ShowSymbol="false" Color="-65536" />
           </Items>
         </PaneSettings>
         <PaneSettings Name="">
