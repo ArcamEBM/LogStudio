@@ -1,6 +1,9 @@
 ﻿using LogStudio.Data;
 using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace LogStudio
@@ -96,14 +99,18 @@ namespace LogStudio
         /// <summary>
         /// Comparer to use
         /// </summary>
-        private IComparer m_Comparer;
+        private NumericSorter m_Comparer;
 
         /// <summary>
         /// Class constructor.  Initializes various elements
         /// </summary>
-        public ListViewColumnSorter(IComparer comparer)
+        public ListViewColumnSorter(NumericSorter comparer, Type typeToSort = null)
         {
             m_Comparer = comparer;
+            if (typeToSort != null)
+	            m_Comparer.TypeToSort = typeToSort;
+            else
+				m_Comparer.TypeToSort = typeof(int);
             // Initialize the column to '0'
             ColumnToSort = 0;
 
@@ -177,14 +184,17 @@ namespace LogStudio
 
     public class NumericSorter : IComparer
     {
+	    public Type TypeToSort { set; get; }
+		#region IComparer Members
 
-        #region IComparer Members
-
-        public int Compare(object x, object y)
+		public int Compare(object x, object y)
         {
-            return long.Parse(x.ToString()).CompareTo(long.Parse(y.ToString()));
+            if (TypeToSort == typeof(double))
+                return double.Parse(x.ToString()).CompareTo(double.Parse(y.ToString()));
+            else
+		        return long.Parse(x.ToString()).CompareTo(long.Parse(y.ToString()));
         }
-
+        
         #endregion
     }
 }

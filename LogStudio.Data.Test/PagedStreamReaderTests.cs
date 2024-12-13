@@ -3,7 +3,7 @@ using NUnit.Framework;
 using System.IO;
 using System.Linq;
 
-namespace LogStudio.DataTest
+namespace LogStudio.Data.Test
 {
     [TestFixture]
     public class PagedStreamReaderTests

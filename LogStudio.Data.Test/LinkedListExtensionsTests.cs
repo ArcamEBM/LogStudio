@@ -4,7 +4,7 @@ using NUnit.Framework.Internal;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace LogStudio.DataTest
+namespace LogStudio.Data.Test
 {
     [TestFixture]
     public class LinkedListExtensionsTests

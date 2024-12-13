@@ -19,4 +19,4 @@ using System.Runtime.InteropServices;
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("66cab52e-9be6-4072-9c31-222500884270")]
-[assembly: InternalsVisibleTo("LogStudio.DataTest")]
+[assembly: InternalsVisibleTo("LogStudio.Data.Test")]

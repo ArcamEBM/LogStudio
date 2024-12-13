@@ -3,8 +3,8 @@
      xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
   <?define OutputPath="..\Output\"?>
   <?define ProductVersion=!(bind.fileVersion.LogStudio.exe)?>
-  <?define ProductName=$(var.LogStudio.TargetName)?>
-  <?define ProductManufacturer=$(var.LogStudio.TargetName)?>
+  <?define ProductName="LogStudio"?>
+  <?define ProductManufacturer="Log Studio"?>
   <?define ProductUpgradeCode="19007365-15c8-421f-bbbd-d01666a82d19"?>
   <Product Id="*"
            Name="$(var.ProductName) $(var.ProductVersion)"
@@ -180,9 +180,6 @@
       </Component>
       <Component Id="LogStudio.exe.config" Guid="100a6161-2dc6-43af-b51b-2a913129547f">
         <File Id="LogStudio.exe.config" Name="LogStudio.exe.config" Source="$(var.OutputPath)LogStudio.exe.config" />
-      </Component>
-      <Component Id="ItemReplacements.data" Guid="30c16f7a-0cc8-4f15-b298-ee652d4e66e3">
-        <File Id="ItemReplacements.data" Name="ItemReplacements.data" Source="$(var.OutputPath)ItemReplacements.data" />
       </Component>
       <Component Id="log4net.dll" Guid="0088b9c9-4574-4a2b-a658-b81a3ba60396">
         <File Id="log4net.dll" Name="log4net.dll" Source="$(var.OutputPath)log4net.dll" />
